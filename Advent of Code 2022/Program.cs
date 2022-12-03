@@ -2,8 +2,13 @@
  * Advent of Code  Year 2022  *
  ******************************/
 
-Day1.Challenge1();
-Day1.Challenge2();
+// Day1.Challenge1();
+// Day1.Challenge2();
+//Day2.Challenge1();
+//Day2.Challenge2();
+//Day3.Challenge1();
+Day3.Challenge2();
+
 
 static class Helper
 {
