@@ -11,8 +11,17 @@
 //Day4.Challenge1();
 //Day4.Challenge2();
 //Day5.Challenge1();
-Day5.Challenge2();
-
+//Day5.Challenge2();
+//Day6.Challenge1();
+//Day6.Challenge2();
+Day7.Challenge1();
+//Day7.Challenge2();
+//Day8.Challenge1();
+//Day8.Challenge2();
+//Day9.Challenge1();
+//Day9.Challenge2();
+//Day10.Challenge1();
+//Day10.Challenge2();
 
 static class Helper
 {
@@ -20,6 +29,12 @@ static class Helper
     {
         string[] result = File.ReadAllLines("..\\..\\..\\" + fileName);
         return result;
+    }
+
+    public static string ReadFileIntoString(string fileName)
+    {
+        string[] result = File.ReadAllLines("..\\..\\..\\" + fileName);
+        return result[0];
     }
 
     public static List<string> ReadFileIntoStringList(string fileName)
