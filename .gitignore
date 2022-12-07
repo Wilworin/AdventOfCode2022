@@ -1,0 +1,30 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Advent of Code 2022/FileContentIndex/1fbd42f6-411f-4698-9909-32ec80ad2d51.vsidx
+/.vs/Advent of Code 2022/DesignTimeBuild/.dtbcache.v2
+*.vsidx
+/.vs/Advent of Code 2022/FileContentIndex/df4a3b87-1eaf-46c2-9019-b842d68e62eb.vsidx
+/Advent of Code 2022/bin/Debug/net6.0/Advent of Code 2022.dll
+/Advent of Code 2022/bin/Debug/net6.0/Advent of Code 2022.exe
+/Advent of Code 2022/bin/Debug/net6.0/Advent of Code 2022.pdb
+/.vs/Advent of Code 2022/v17/.suo
+/Advent of Code 2022/obj/Debug/net6.0/ref/Advent of Code 2022.dll
+/Advent of Code 2022/obj/Debug/net6.0/refint/Advent of Code 2022.dll
+/Advent of Code 2022/obj/project.nuget.cache
+/Advent of Code 2022/obj/project.assets.json
+/Advent of Code 2022/obj/Advent of Code 2022.csproj.nuget.g.props
+/Advent of Code 2022/obj/Advent of Code 2022.csproj.nuget.dgspec.json
+/Advent of Code 2022/obj/Debug/net6.0/Advent of Code 2022.csproj.CoreCompileInputs.cache
+/Advent of Code 2022/obj/Debug/net6.0/Advent of Code 2022.csproj.BuildWithSkipAnalyzers
+/Advent of Code 2022/obj/Debug/net6.0/Advent of Code 2022.assets.cache
+/.vs/Advent of Code 2022/FileContentIndex/df4a3b87-1eaf-46c2-9019-b842d68e62eb.vsidx
+/.vs/Advent of Code 2022/FileContentIndex/1fbd42f6-411f-4698-9909-32ec80ad2d51.vsidx
+*.editorconfig
+*.dll
+/Advent of Code 2022/obj/Debug/net6.0/Advent of Code 2022.csproj.FileListAbsolute.txt
+/Advent of Code 2022/obj/Debug/net6.0/Advent of Code 2022.genruntimeconfig.cache
+*.pdb
+*.exe
+/Advent of Code 2022/obj/Debug/net6.0/_IsIncrementalBuild
