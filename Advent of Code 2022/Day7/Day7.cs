@@ -1,67 +1,50 @@
 ﻿class Day7
 {
-    Dictionary<string, int> sumsOfDirs = new Dictionary<string, int>();
+    static Dictionary<string, int> sumsOfDirs = new Dictionary<string, int>();
 
     public static void Challenge1()
     {
         string fileName = "Day7\\input.txt";
         var input = Helper.ReadFileIntoStringArray(fileName);
 
-        var command = "";
-        var output = 0;
-        var sumOfThisDir = 0;
-        var path = new List<string>();
+        var path = "";
         for (int i = 0; i < input.Length; i++)
         {
+            Console.WriteLine(input[i]);
             var split = input[i].Split(' ');
 
-
-            //if (int.TryParse(split[0], out int number))
-            //{
-            //    sumOfThisDir += number;
-            //}
-            //else
-            //{
-            //    if (sumOfThisDir > 0)
-            //    {
-            //        if (sumOfThisDir <= 100000)
-            //        {
-            //            Console.WriteLine("SUM: " + sumOfThisDir);
-            //            output += sumOfThisDir;
-            //        }
-            //        sumOfThisDir = 0;
-            //    }
-            //}
-
-            if (command == "dir")
+            if (int.TryParse(split[0], out int number))
             {
-                if (int.TryParse(split[0], out int number))
-                {
-                    Console.WriteLine(number);
-                    sumOfThisDir += number;
-                    continue;
-                }
-                else
-                {
-                    Console.WriteLine("Slut på LS. Sum: " + sumOfThisDir);
-                    if (sumOfThisDir <= 100000)
-                        output += sumOfThisDir;
-                    sumOfThisDir = 0;
-                    command = "";
-                }
-            }
-            if (split[0] == "dir")
-            {
-                Console.WriteLine("DIR");
-                command = "dir";
+                UpdateSumOfPath(number, path);
                 continue;
             }
+            if (split[1] == "cd")
+            {
+                path = ChangeDirectory(split[2], path);
+                UpdateSumOfPath(0, path);
+                Console.WriteLine("Path: " + path);
+            }
+            continue;
         }
-        if (sumOfThisDir <= 100000)
-            output += sumOfThisDir;
 
+        var totalSum = 0;
+        Console.WriteLine("Sums in Dirs");
+        foreach (var current in sumsOfDirs)
+        {
+            var sum = 0;
+            foreach (var compare in sumsOfDirs)
+            {
+                if (compare.Key.Contains(current.Key))
+                {
+                    sum += compare.Value;
+                }
+            }
+            Console.WriteLine(current.Key+ ": " + sum);
+            if (sum <= 100000)
+                totalSum+= sum;
+        }
 
-        Console.WriteLine("Day7. Challenge 1: " + output);
+        Console.WriteLine("Day7. Challenge 1: " + totalSum);
     }
 
     public static void Challenge2()
@@ -70,7 +53,79 @@
         var input = Helper.ReadFileIntoStringArray(fileName);
 
         var output = 0;
+        var path = "";
+        for (int i = 0; i < input.Length; i++)
+        {
+            var split = input[i].Split(' ');
+
+            if (int.TryParse(split[0], out int number))
+            {
+                UpdateSumOfPath(number, path);
+                continue;
+            }
+            if (split[1] == "cd")
+            {
+                path = ChangeDirectory(split[2], path);
+                UpdateSumOfPath(0, path);
+            }
+            continue;
+        }
+
+        var sums = new SortedList<int, string>();
+        var totalSum = 0;
+        foreach (var current in sumsOfDirs)
+        {
+            var sum = 0;
+            foreach (var compare in sumsOfDirs)
+            {
+                if (compare.Key.Contains(current.Key))
+                {
+                    sum += compare.Value;
+                }
+            }
+            if (current.Key == "C:/")
+            {
+                totalSum = sum;
+            }
+            sums.TryAdd(sum, current.Key);
+        }
+        Console.WriteLine("Sums in Dirs: " + totalSum);
+        var free = 70000000 - totalSum;
+        var sumToDelete = 30000000 - free;
+        Console.WriteLine("Free: " + free);
+        Console.WriteLine("To Delete: " + sumToDelete);
+
+        foreach (var i in sums)
+        {
+            if (i.Key >= sumToDelete)
+            {
+                output = i.Key;
+                break;
+            }
+        }
 
         Console.WriteLine("Day7. Challenge 2: " + output);
+    }
+
+    private static string ChangeDirectory(string command, string path)
+    {
+        if (command == "/")
+            return "C:/";
+        if (command == "..")
+        {
+            if (path == "C:/") return "C:/";
+            var lastIndex = path.LastIndexOf('/',(path.Length-2));
+            return lastIndex > 0 ? path.Substring(0, lastIndex+1) : "C:/";
+        }
+        return path + command + "/";
+    }
+
+    private static void UpdateSumOfPath (int sum, string path)
+    {
+        if (sumsOfDirs.TryGetValue(path, out var oldSum)) 
+        {
+            sumsOfDirs[path] = oldSum + sum;
+        }
+        else sumsOfDirs.TryAdd(path, sum);
     }
 }
