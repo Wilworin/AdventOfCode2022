@@ -28,3 +28,6 @@
 *.pdb
 *.exe
 /Advent of Code 2022/obj/Debug/net6.0/_IsIncrementalBuild
+/.vs/ProjectEvaluation/advent of code 2022.projects.v5.2
+/.vs/ProjectEvaluation/advent of code 2022.metadata.v5.2
+/.vs/Advent of Code 2022/v17/.futdcache.v2
