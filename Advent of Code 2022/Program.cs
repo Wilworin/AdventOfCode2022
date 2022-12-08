@@ -14,9 +14,9 @@
 //Day5.Challenge2();
 //Day6.Challenge1();
 //Day6.Challenge2();
-Day7.Challenge1();
+//Day7.Challenge1();
 //Day7.Challenge2();
-//Day8.Challenge1();
+Day8.Challenge1();
 //Day8.Challenge2();
 //Day9.Challenge1();
 //Day9.Challenge2();
@@ -64,6 +64,21 @@ static class Helper
     }
 
     public static int[] ReadFileIntoIntArray(string fileName)
+    {
+        List<int> result = new();
+        string[] fileInput = File.ReadAllLines("..\\..\\..\\" + fileName);
+        int number = 0;
+        foreach (string line in fileInput)
+        {
+            if (int.TryParse(line, out number))
+            {
+                result.Add(number);
+            }
+        }
+        return result.ToArray();
+    }
+
+    public static int[] ReadFileInto2DIntArray(string fileName)
     {
         List<int> result = new();
         string[] fileInput = File.ReadAllLines("..\\..\\..\\" + fileName);
