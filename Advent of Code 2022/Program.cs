@@ -17,11 +17,16 @@
 //Day7.Challenge1();
 //Day7.Challenge2();
 //Day8.Challenge1();
-Day8.Challenge2();
+//Day8.Challenge2();
 //Day9.Challenge1();
-//Day9.Challenge2();
+Day9.Challenge2();
 //Day10.Challenge1();
 //Day10.Challenge2();
+
+//Console.WriteLine(long.Parse(string.Concat(new int[] {0,1,2,3,4,5,6,7,8,9})).ToString("<000> 000-0000")); 
+//string fileName = "Day8\\input.txt";
+//var input = Helper.ReadFileInto2DIntArray(fileName);
+//Console.WriteLine(input);
 
 static class Helper
 {
@@ -78,19 +83,22 @@ static class Helper
         return result.ToArray();
     }
 
-    public static int[] ReadFileInto2DIntArray(string fileName)
+    public static int[,] ReadFileInto2DIntArray(string fileName)
     {
-        List<int> result = new();
         string[] fileInput = File.ReadAllLines("..\\..\\..\\" + fileName);
-        int number = 0;
-        foreach (string line in fileInput)
+        var xMax = fileInput[0].Length;
+        var yMax = fileInput.Length;
+
+        var result = new int[xMax, yMax];
+        for (int y = 0; y < yMax; y++)
         {
-            if (int.TryParse(line, out number))
+            for (int x = 0; x < xMax; x++)
             {
-                result.Add(number);
+                var t = fileInput[y][x];
+                //result[x, y] = int.Parse(t);
             }
         }
-        return result.ToArray();
+        return result;
     }
 
     public static int ConvertBinaryStringToDecimalInt(string binary)
