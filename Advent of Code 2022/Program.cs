@@ -19,9 +19,9 @@
 //Day8.Challenge1();
 //Day8.Challenge2();
 //Day9.Challenge1();
-Day9.Challenge2();
+//Day9.Challenge2();
 //Day10.Challenge1();
-//Day10.Challenge2();
+Day10.Challenge2();
 
 //Console.WriteLine(long.Parse(string.Concat(new int[] {0,1,2,3,4,5,6,7,8,9})).ToString("<000> 000-0000")); 
 //string fileName = "Day8\\input.txt";
