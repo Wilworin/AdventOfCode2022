@@ -21,7 +21,25 @@
 //Day9.Challenge1();
 //Day9.Challenge2();
 //Day10.Challenge1();
-Day10.Challenge2();
+//Day10.Challenge2();
+//Day11.Challenge1();
+Day11.Challenge2();
+//Day12.Challenge1();
+//Day12.Challenge2();
+//Day13.Challenge1();
+//Day13.Challenge2();
+//Day14.Challenge1();
+//Day14.Challenge2();
+//Day15.Challenge1();
+//Day15.Challenge2();
+//Day16.Challenge1();
+//Day16.Challenge2();
+//Day17.Challenge1();
+//Day17.Challenge2();
+//Day18.Challenge1();
+//Day18.Challenge2();
+//Day19.Challenge1();
+//Day19.Challenge2();
 
 //Console.WriteLine(long.Parse(string.Concat(new int[] {0,1,2,3,4,5,6,7,8,9})).ToString("<000> 000-0000")); 
 //string fileName = "Day8\\input.txt";
