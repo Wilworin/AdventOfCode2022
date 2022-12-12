@@ -23,9 +23,9 @@
 //Day10.Challenge1();
 //Day10.Challenge2();
 //Day11.Challenge1();
-Day11.Challenge2();
+//Day11.Challenge2();
 //Day12.Challenge1();
-//Day12.Challenge2();
+Day12.Challenge2();
 //Day13.Challenge1();
 //Day13.Challenge2();
 //Day14.Challenge1();

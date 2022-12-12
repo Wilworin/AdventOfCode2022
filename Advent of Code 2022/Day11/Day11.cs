@@ -181,10 +181,10 @@ class Monkey
     public void Print()
     {
         Console.WriteLine("Name: " + Name);
-        Console.WriteLine("Operation: " + Operation);
-        Console.WriteLine("Test: " + Test);
-        Console.WriteLine("ThrowIfTrue: " + ThrowToIfTrue);
-        Console.WriteLine("ThrowIfFalse: " + ThrowToIfFalse);
+        //Console.WriteLine("Operation: " + Operation);
+        //Console.WriteLine("Test: " + Test);
+        //Console.WriteLine("ThrowIfTrue: " + ThrowToIfTrue);
+        //Console.WriteLine("ThrowIfFalse: " + ThrowToIfFalse);
         Console.WriteLine("Thrown # times: " + Thrown);
         foreach (Item item in Items)
         {
