@@ -32,10 +32,10 @@
 //Day14.Challenge2();
 //Day15.Challenge1();
 //Day15.Challenge2();
-Day16.Challenge1();
+//Day16.Challenge1();
 //Day16.Challenge2();
 //Day17.Challenge1();
-//Day17.Challenge2();
+Day17.Challenge2();
 //Day18.Challenge1();
 //Day18.Challenge2();
 //Day19.Challenge1();
