@@ -35,13 +35,13 @@
     public static void Challenge2()
     {
         string fileName = "Day17\\input.txt";
-        //var input = Helper.ReadFileIntoStringArray(fileName)[0].ToCharArray();
-        var input = ">>><<><>><<<>><>>><<<>>><<<><<<>><>><<>>".ToCharArray();
+        var input = Helper.ReadFileIntoStringArray(fileName)[0].ToCharArray();
+        //var input = ">>><<><>><<<>><>>><<<>>><<<><<<>><>><<>>".ToCharArray();
         //var chamber = new char[9, 30];
         //var chamber2 = new char[9, 30];
 
-        var chamber = new string[11000000];
-        for (int i = 0; i < 11000000; i++)
+        var chamber = new string[110000000];
+        for (int i = 0; i < 110000000; i++)
         {
             chamber[i] = ".........";
         }
@@ -54,7 +54,7 @@
         long total = 0;
         //Array.Copy(chamber, 5, chamber2, 5, 10);
 
-        for (long rocks = 1; rocks <= 1000000000000; rocks++)
+        for (long rocks = 1; rocks <= 1000000; rocks++)
         {
             y = highest + 4;
             x = 3;
@@ -66,24 +66,35 @@
             }
             shape++;
             if (shape == 5) { shape = 0; }
-            if (highest > 1050000)
+            if (highest > 105000000)
             {
-                total += 950000; // Convert.ToInt64(highest);
-                highest -= 950000;
-                var tempChamber = new string[1100000];
-                for (int i = 0; i < 1100000; i++)
+                total += 100000000; // Convert.ToInt64(highest);
+                highest -= 100000000;
+                var tempChamber = new string[110000000];
+                for (int i = 0; i < 110000000; i++)
                 {
                     tempChamber[i] = ".........";
                 }
-                Array.Copy(chamber, 950001, tempChamber, 1, 140000);
+                Array.Copy(chamber, 100000001, tempChamber, 1, 6000000);
                 chamber = tempChamber;
-                //Print(chamber, 25, 1);
+                Print(chamber, 50480, 50455);
+                Console.WriteLine();
+                Print(chamber, 26, 1);
                 Console.WriteLine("Total rows so far: " + total);
             }
         }
 
         //Array.Copy(chamber, 5, chamber2, 0, 10);
         //Print(chamber, 50, 1);
+        Print(chamber, 201835, 201820);
+        Console.WriteLine();
+        Print(chamber, 151380, 151365);
+        Console.WriteLine();
+        Print(chamber, 100925, 100910);
+        Console.WriteLine();
+        Print(chamber, 50460, 50455);
+        Console.WriteLine();
+        Print(chamber, 15, 1);
         Console.WriteLine(total);
         
 
