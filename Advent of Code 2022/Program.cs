@@ -41,9 +41,9 @@
 //Day19.Challenge1();
 //Day19.Challenge2();
 //Day20.Challenge1();
-Day20.Challenge2();
+//Day20.Challenge2();
 //Day21.Challenge1();
-//Day21.Challenge2();
+Day21.Challenge2();
 //Day22.Challenge1();
 //Day22.Challenge2();
 //Day23.Challenge1();
